@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>J.A.R.V.I.S. — Core Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script defer src="/static/script.js"></script>
+  <meta name="theme-color" content="#021521">
+  <style>/* small inline fallback */</style>
+</head>
+<body>
+
+  <div class="dash">
+
+    <header class="dash-header">
+      <div class="brand">J.A.R.V.I.S. <span class="ver">CORE V9.1</span></div>
+      <div class="hdr-right">
+        <div id="current-time" class="time"></div>
+      </div>
+    </header>
+
+    <main class="dash-main">
+
+      <section class="grid-left">
+        <div class="panel big">
+          <h3>SYSTEM METRICS</h3>
+          <div class="metrics">
+            <div>CPU: <span class="meter">12%</span></div>
+            <div>MEM: <span class="meter">4.2GB</span></div>
+            <div>DISK: <span class="meter">234GB</span></div>
+          </div>
+        </div>
+
+        <div class="panel tiles">
+          <div class="tile">ORACLE<br/><small>Workflows</small></div>
+          <div class="tile">FRIDAY<br/><small>Daily Intel</small></div>
+          <div class="tile">VERONICA<br/><small>Content</small></div>
+          <div class="tile">ULTRON<br/><small>Security</small></div>
+          <div class="tile">ATHENA<br/><small>Strategy</small></div>
+          <div class="tile">STARK<br/><small>Biz Intel</small></div>
+        </div>
+      </section>
+
+      <section class="grid-center">
+        <div class="panel console">
+          <div class="console-top">
+            <div class="console-title">COMMAND INTERFACE</div>
+            <div class="console-status">SYSTEM ONLINE • TOKENS: 573 • LATENCY: 20ms</div>
+          </div>
+          <div id="command-log" class="command-log" aria-live="polite">
+            <div class="log-line">&gt; USER: hi</div>
+            <div class="log-line">&gt; JARVIS: Acknowledged. Processing your request...</div>
+          </div>
+          <div class="console-input">
+            <input id="command-input" placeholder="Type command here..." />
+            <button id="cmd-send" onclick="sendConsoleCommand()">SEND</button>
+          </div>
+        </div>
+
+        <div class="panel metrics-row">
+          <div class="mini">AUDIO PLAYER</div>
+          <div class="mini">AGENT LOGS</div>
+          <div class="mini">NOTIFICATIONS</div>
+        </div>
+      </section>
+
+      <aside class="grid-right">
+        <div class="panel small">AGENT LIST</div>
+        <div class="panel small">NOTIFICATIONS</div>
+        <div class="panel small">SYSTEM</div>
+      </aside>
+
+    </main>
+
+    <footer class="dash-footer">Secure Connection • Encryption: AES-256</footer>
+
+  </div>
+
+</body>
+</html>
